@@ -1,0 +1,48 @@
+<!-- templates/aboutus.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div id="navbar">
+        <h3>About Us</h3>
+        <a href="/properties">Properties</a>
+        <a href="/services">Services</a>
+        <a href="/aboutus">About Us</a>
+        <a href="/contactus">Contacts</a>
+      </div>
+      <h1>About Us</h1>
+      <img id="aboutus_image"
+        src="{{url_for('static', filename='aboutus.jpg')}}"
+        alt="Property Image"
+      />
+      <h2 ><a href="/">Home</a></h2>
+    </div>
+
+    <div class="container">
+      <h1>About Us</h1>
+      <div class="col-md-6">
+          <p class="text-black-50">
+              At Property Management Systems, we pride ourselves on our commitment to excellence in real estate services. With years of experience in the industry, we have established ourselves as a trusted partner for property owners, buyers, and tenants alike. Our dedicated team of professionals is passionate about delivering exceptional results and ensuring the satisfaction of our clients.
+          </p>
+          <p class="text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum sapien sed magna vehicula, nec vestibulum purus fringilla. Duis hendrerit, justo at tincidunt scelerisque, nunc velit convallis ipsum, eu gravida tortor risus a nunc. Integer congue est ut sapien aliquet, a dictum lorem accumsan. Cras aliquet, libero vel tempor eleifend, nunc justo varius mauris, et commodo ex urna id eros. Maecenas sed magna et nunc fermentum volutpat vitae sed ipsum. Fusce interdum nulla sed ipsum eleifend, a vehicula leo accumsan. Integer id semper leo. In scelerisque purus nec dolor maximus, nec consectetur sapien molestie. Pellentesque congue sem sed turpis egestas, in laoreet ante accumsan. Duis convallis condimentum sollicitudin.
+          </p>
+          <p class="text-black-50">
+              Vestibulum tincidunt felis et eleifend tempor. Praesent in ante sed felis auctor ultricies eu non odio. Donec id tortor elit. Cras vel arcu eu nulla pretium eleifend. Vestibulum vitae vestibulum nisi. Sed nec quam condimentum, sodales urna vel, viverra nisl. Pellentesque sit amet metus euismod, tempor orci vitae, commodo leo. Aliquam eget felis nec neque fringilla facilisis. Mauris ac metus nec lorem lacinia hendrerit. Ut sit amet pharetra velit.
+          </p>
+      </div>
+  </div>
+  
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

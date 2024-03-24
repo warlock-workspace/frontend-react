@@ -1,0 +1,99 @@
+<!-- templates/sell_property.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Property</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div id="navbar">
+        <h3>Post Property</h3>
+        <a href="#" class="dropdownButton">Properties</a>
+        <div>
+          <a>Services</a>
+        </div>
+        <a href="/aboutus">About Us</a>
+        <a href="/contactus">Contacts</a>
+      </div>
+
+      <div class="dropdown" style="display: none;">
+        <p>Rental</p>
+        <p>
+          <a href="sell-your-property" style="text-decoration: none;">Sale</a>
+        </p>
+        <p>Lease</p>
+      </div>
+      <h1>Post Property</h1>
+      <img
+        id="sell_property_image"
+        src="{{url_for('static', filename='saleproperty.jpg')}}"
+        alt="Sell Property Image"
+      />
+    </div>
+
+    <div class="container" id="post-property">
+      <h2>Upload Property Details</h2>
+      <form
+        action="/submit_property"
+        method="POST"
+        class="property-form"
+        id="property-form"
+      >
+        <div class="form-group">
+          <label for="property_title">Property Title:</label>
+          <input
+            type="text"
+            id="property_title"
+            name="property_title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="property_type">Property Type:</label>
+          <select id="property_type" name="property_type" required>
+            <option value="">Select Property Type</option>
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+            <option value="condo">Condo</option>
+            <option value="land">Land</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="property_description">Description:</label>
+          <textarea
+            id="property_description"
+            name="property_description"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="property_image">Upload Image:</label>
+          <input
+            type="file"
+            id="property_image"
+            name="property_image"
+            accept="image/*"
+          />
+        </div>
+        <div class="form-group">
+          <label for="property_price">Price:</label>
+          <input
+            type="number"
+            id="property_price"
+            name="property_price"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- templates/thankyou.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div id="navbar">
+        <a href="/properties">Properties</a>
+        <a href="/services">Services</a>
+        <a href="/aboutus">About Us</a>
+        <a href="/contactus">Contacts</a>
+      </div>
+      <img
+        src="{{url_for('static', filename='contactus.jpg')}}"
+        alt="Property Image"
+      />
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
