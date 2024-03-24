@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.container-featured-poperties {
+  .container {
+    margin: 1 auto;
+    padding: 0px;
+    overflow-x: auto;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #333;
+    font-family: 'Bebas Neue';
+  }
+
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .propertyDetailsContainer {
+    height: 200px;
+    background-color: #ffffff;
+    width: 100%;
+  }
+
+  .card {
+    background-color: rgb(255 255 255);
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover {
+    transform: scale(0.95); /* Scaling down the card on hover */
+  }
+
+  .propertyImage {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .propertyInfo {
+    flex: 1;
+    padding: 7px;
+    background-color: #f9f9f9;
+  }
+
+  .propertyTitle {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .propertyDetails {
+    color: #666;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .viewButton {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

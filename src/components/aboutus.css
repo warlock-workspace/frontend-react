@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+.about-page {
+  /* Fade-in effect on scroll */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .fade-in.active {
+    opacity: 1;
+  }
+
+  /* About content styles */
+  .about-content {
+    padding: 50px 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .container h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #00000088;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    transition: color 0.3s ease;
+  }
+  .container h2:hover {
+    color: #ffffff;
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    transition: transform 0.7s ease; /* Add transition for smooth effect */
+  }
+
+  .container p {
+    font-size: 20px;
+    color: #faf8f8;
+    line-height: 1.6;
+  }
+
+  .container h3 {
+    font-size: 28px;
+    color: #00000088;
+    margin-top: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    transition: color 0.3s ease;
+  }
+
+  .container h3:hover {
+    color: #ffffff;
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    transition: transform 0.7s ease; /* Add transition for smooth effect */
+  }
+
+  .container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container li {
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+}

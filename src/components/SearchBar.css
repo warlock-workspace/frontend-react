@@ -1,0 +1,45 @@
+.search-bar {
+  position: absolute;
+  top: 30%;
+  left: 0% !important;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.search-bar button {
+  background-color: rgb(86, 135, 199);
+  border: none;
+  outline: none;
+  width: 60px;
+  margin-left: 340px;
+  position: absolute;
+  padding: 20px;
+  border-radius: 100px;
+}
+
+.search-bar button:hover {
+  background-color: rgb(86, 158, 199);
+}
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 30%;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  margin: 10%;
+  outline: none;
+  padding: 25px;
+}
+
+.search-bar input[type="text"]:focus {
+  outline: none;
+}

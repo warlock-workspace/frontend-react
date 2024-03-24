@@ -1,0 +1,16 @@
+.properties-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .properties-table th,
+  .properties-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .properties-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  

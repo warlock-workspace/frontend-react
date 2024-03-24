@@ -1,0 +1,52 @@
+.signin-container {
+    position: absolute;
+    z-index: 2; /* Ensure the form is above the hero image */
+    top: 70%; /* Position the form vertically at the center of the page */
+    left: 50%; /* Position the form horizontally at the center of the page */
+    transform: translate(-50%, -50%); /* Center the form precisely */
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signin-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .signin-container form div {
+    margin-bottom: 20px;
+  }
+  
+  .signin-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .signin-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signin-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-container button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,35 @@
+.properties {
+  margin-top: 10%;
+  position: sticky; /* Set container position to relative */
+  background-color: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap; /* Ensure cards wrap to the next line */
+  justify-content: space-around; /* Align cards evenly */
+  overflow: hidden; /* Hide overflow for proper positioning */
+}
+
+.card {
+  position: relative; /* Set card position to relative */
+  flex: 0 1 calc(25% - 20px); /* Adjust width for each card, considering margin */
+  background-color: #fff;
+  padding: 20px; /* Add more padding to the card */
+  margin: 10px; /* Adjust margin */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visual */
+  transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.5;
+}

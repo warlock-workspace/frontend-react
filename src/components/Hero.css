@@ -1,0 +1,19 @@
+.hero {
+  position: relative; /* Ensure proper positioning for absolute elements */
+  height: auto;
+  max-width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Centering the text */
+  font: 400 1.5rem "Protest Strike", sans-serif; /* Applying font family and size */
+  font-style: normal; /* Ensuring normal font style */
+  color: white;
+}
+
+.HeroImg{
+  height: 800px;
+}
