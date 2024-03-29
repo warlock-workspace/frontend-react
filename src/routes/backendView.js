@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
+import { useTable } from "react-table";
 import "../css/backend.css"; // Import your CSS file for additional styling
 
 const BackendView = () => {
@@ -24,6 +25,30 @@ const BackendView = () => {
     }
   };
 
+  const handleEdit = (id) => {
+    // Implement your edit logic here, such as redirecting to an edit page
+    console.log("Edit property with ID:", id);
+  };
+
+  const columns = useMemo(
+    () => [
+      { Header: 'Property Name', accessor: 'property_name' },
+      { Header: 'Description', accessor: 'description' },
+      { Header: 'Location', accessor: 'location' },
+      { Header: 'Amount', accessor: 'amount' },
+      { Header: 'Edit', accessor: 'id', Cell: ({ value }) => (<button type="button" className="btn btn-primary" onClick={() => handleEdit(value)}>Edit</button>) }
+    ],
+    []
+  );
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable({ columns, data: properties });
+
   return (
     <div>
       <h2>Backend View</h2>
@@ -34,24 +59,29 @@ const BackendView = () => {
       ) : properties.length === 0 ? (
         <p>No properties found.</p>
       ) : (
-        <table className="table">
+        <table className="table" {...getTableProps()}>
           <thead className="thead-dark">
-            <tr>
-              <th>Property Name</th>
-              <th>Description</th>
-              <th>Location</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            {properties.map((property, index) => (
-              <tr key={index}>
-                <td>{property.property_name}</td>
-                <td>{property.description}</td>
-                <td>{property.location}</td>
-                <td>{property.amount}</td>
+            {headerGroups.map(headerGroup => (
+              <tr {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map(column => (
+                  <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                ))}
               </tr>
             ))}
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {rows.map(row => {
+              prepareRow(row);
+              return (
+                <tr {...row.getRowProps()}>
+                  {row.cells.map(cell => {
+                    return (
+                      <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                    )
+                  })}
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       )}

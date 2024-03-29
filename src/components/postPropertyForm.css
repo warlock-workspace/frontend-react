@@ -2,7 +2,7 @@
   background-color: #ffffff;
   width: 900px;
   position: absolute;
-  top: 90%; /* Adjust to center vertically */
+  top: 100%; /* Adjust to center vertically */
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;

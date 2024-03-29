@@ -2,6 +2,7 @@ import React from "react";
 
 const SocialMedia = () => {
   return (
+    
     <div style={styles.container}>
       <div style={styles.section}>
         <h3 style={styles.title}>Contact Us</h3>
@@ -62,6 +63,10 @@ const SocialMedia = () => {
           </a>
         </div>
       </div>
+      
+      <div>
+     
+    </div>
     </div>
   );
 };
